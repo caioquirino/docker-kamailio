@@ -1,17 +1,22 @@
 kamailio:
   build: kamailio
-  net: host
+#  net: host
   volumes:
     - ./conf/kamailio.cfg:/etc/kamailio/kamailio.cfg
     - ./conf/kamctlrc:/etc/kamailio/kamctlrc
+  links:
+    - kamailio_database:kamailio_database
   ports:
-    - "5060:5060/udp"
+    - "5060/udp:5060/udp"
+    - "5060:5060"
   command: /run.sh
 
 kamailio_database:
-  net: host
+#  net: host
   image: mysql:5
   hostname: kamailio_database
+  expose:
+    - "3306"
   environment:
     - MYSQL_ROOT_PASSWORD=kamailio
   volumes:
