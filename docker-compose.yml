@@ -6,10 +6,17 @@ kamailio:
     - ./conf/kamctlrc:/etc/kamailio/kamctlrc
   links:
     - kamailio_database:kamailio_database
+    - rtpproxy:rtpproxy
   ports:
     - "5060/udp:5060/udp"
     - "5060:5060"
   command: /run.sh
+
+rtpproxy:
+  image: caioquirino/rtpproxy
+  hostname: rtpproxy
+  ports:
+    - "7722/udp:7722/udp"
 
 kamailio_database:
 #  net: host
