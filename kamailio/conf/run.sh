@@ -13,4 +13,5 @@ while true; do
 done
 
 #Run
-kamailio -M 24 -m 64 -DD -E -e -f /etc/kamailio/kamailio.cfg || ( echo "DEU ERRO $?"; sleep infinity)
+kamailio -M 24 -m 64 -DD -E -e -f /etc/kamailio/kamailio.cfg \
+  || ( echo "DEU ERRO $?"; sleep infinity)

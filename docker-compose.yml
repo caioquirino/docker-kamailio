@@ -15,8 +15,9 @@ kamailio:
 rtpproxy:
   image: caioquirino/rtpproxy
   hostname: rtpproxy
-  ports:
-    - "7722/udp:7722/udp"
+  expose:
+    - "7722/udp"
+  command: rtpproxy -F -f -s udp:127.0.0.1:7722 -l 192.168.1.186
 
 kamailio_database:
 #  net: host
