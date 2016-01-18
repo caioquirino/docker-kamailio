@@ -7,7 +7,7 @@
 # will use their internal default values.
 
 ## your SIP domain
-SIP_DOMAIN=kamailio
+SIP_DOMAIN=localhost
 
 ## chrooted directory
 # $CHROOT_DIR="/path/to/chrooted/directory"
@@ -32,7 +32,7 @@ DBNAME=kamailio
 DBRWUSER="kamailio"
 
 ## password for database read/write user
-# DBRWPW="kamailiorw"
+DBRWPW="kamailiorw"
 
 ## database read only user
 # DBROUSER="kamailioro"

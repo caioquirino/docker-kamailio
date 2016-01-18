@@ -7,7 +7,8 @@ RUN apt-get update && \
   kamailio kamailio-autheph-modules kamailio-java-modules \
   kamailio-mysql-modules kamailio-presence-modules kamailio-tls-modules \
   kamailio-utils-modules kamailio-websocket-modules kamailio-xml-modules \
-  kamailio-xmpp-modules
+  kamailio-xmpp-modules \
+  net-tools
 
 ENV MYSQL_HOST=kamailio_database
 ENV MYSQL_USER=kamailio

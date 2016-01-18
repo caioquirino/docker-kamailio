@@ -19,7 +19,7 @@ rtpproxy:
     - "7722/udp"
   ports:
     - "65000-65100/udp:65000-65100/udp"
-  command: rtpproxy -F -f -s udp:0.0.0.0:7722 -l $PUBLIC_IP -m 65000 -M 65100
+  command: rtpproxy -F -f -s udp:0.0.0.0:7722 -l ${PUBLIC_IP} -m 65000 -M 65100
 
 kamailio_database:
 #  net: host
